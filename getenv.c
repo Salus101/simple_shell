@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * get_environ - Returns a copy of the string array containing environment variables.
- * @info: Pointer to the parameter struct used to maintain constant function prototype.
+ * get_environ - Returns environment variables.
+ * @info: Pointer to the parameter struct.
  *
  * Return: Pointer to the string array containing environment variables.
  */
