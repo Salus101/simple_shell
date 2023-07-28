@@ -3,6 +3,7 @@
 /**
  * _erratoi - Converts a string to an integer.
  * @s: The string to be converted.
+ *
  * Return: 0 if no numbers in string, converted number otherwise,
  *         -1 on error.
  */
@@ -13,6 +14,7 @@ int _erratoi(char *s)
 
 	if (*s == '+')
 		s++; /* TODO: why does this make main return 255? */
+
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
@@ -25,6 +27,7 @@ int _erratoi(char *s)
 		else
 			return (-1);
 	}
+
 	return (result);
 }
 
@@ -32,8 +35,8 @@ int _erratoi(char *s)
  * print_error - Prints an error message.
  * @info: The parameter & return info struct.
  * @estr: String containing the specified error type.
- * Return: 0 if no numbers in string, converted number otherwise,
- *         -1 on error.
+ *
+ * Return: void.
  */
 void print_error(info_t *info, char *estr)
 {
@@ -69,7 +72,9 @@ int print_d(int input, int fd)
 	}
 	else
 		_abs_ = input;
+
 	current = _abs_;
+
 	for (i = 1000000000; i > 1; i /= 10)
 	{
 		if (_abs_ / i)
@@ -79,6 +84,7 @@ int print_d(int input, int fd)
 		}
 		current %= i;
 	}
+
 	__putchar('0' + current);
 	count++;
 
@@ -106,6 +112,7 @@ char *convert_number(long int num, int base, int flags)
 		n = -num;
 		sign = '-';
 	}
+
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
@@ -118,6 +125,7 @@ char *convert_number(long int num, int base, int flags)
 
 	if (sign)
 		*--ptr = sign;
+
 	return (ptr);
 }
 
@@ -125,7 +133,7 @@ char *convert_number(long int num, int base, int flags)
  * remove_comments - Function replaces the first instance of '#' with '\0'.
  * @buf: Address of the string to modify.
  *
- * Return: Always 0.
+ * Return: void.
  */
 void remove_comments(char *buf)
 {
