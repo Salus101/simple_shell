@@ -67,7 +67,7 @@ typedef struct liststr
  * @alias: The node for maintaining aliases.
  * @env_changed: A flag indicating if the environment variables were changed.
  * @status: The return status of the last executed command.
- * @cmd_buf: The address of the pointer to cmd_buf, used when command chaining is present.
+ * @cmd_buf: The address of the pointer to cmd_buf.
  * @cmd_buf_type: The type of command chaining (CMD_type ||, &&, ;).
  * @readfd: The file descriptor from which line input is read.
  * @histcount: The line number count for the history.
