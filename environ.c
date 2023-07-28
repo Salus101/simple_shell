@@ -36,11 +36,11 @@ return (NULL);
 }
 
 /**
- * _mysetenv - Initializes a new environment variable or modifies an existing one.
- * @info: Structure containing potential arguments. Used to maintain
- *         a constant function prototype.
- * Return: Always 0
- */
+* _mysetenv - Initializes a new environment variable or modifies an existing one.
+* @info: Structure containing potential arguments. Used to maintain
+*         a constant function prototype.
+* Return: Always 0
+*/
 int _mysetenv(info_t *info)
 {
 if (info->argc != 3)
