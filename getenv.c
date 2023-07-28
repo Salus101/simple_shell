@@ -22,7 +22,7 @@ char **get_environ(info_t *info)
  * @info: Pointer to the parameter struct used to maintain constant function prototype.
  * @var: The name of the environment variable to be removed.
  *
- * Return: 1 if the variable is successfully removed, 0 otherwise.
+ * Return: 1 if successfully removed, 0 otherwise.
  */
 int _unsetenv(info_t *info, char *var)
 {
