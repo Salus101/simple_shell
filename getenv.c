@@ -19,7 +19,7 @@ char **get_environ(info_t *info)
 
 /**
  * _unsetenv - Removes an environment variable.
- * @info: Pointer to the parameter struct used to maintain constant function prototype.
+ * @info: Pointer to the parameter struct.
  * @var: The name of the environment variable to be removed.
  *
  * Return: 1 if successfully removed, 0 otherwise.
@@ -51,8 +51,8 @@ int _unsetenv(info_t *info, char *var)
 }
 
 /**
- * _setenv - Initializes a new environment variable or modifies an existing one.
- * @info: Pointer to the parameter struct used to maintain constant function prototype.
+ * _setenv - Initializes a new environment variable.
+ * @info: Pointer to maintain constant function prototype.
  * @var: The name of the environment variable to be set or modified.
  * @value: The value to be assigned to the environment variable.
  *
