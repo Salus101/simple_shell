@@ -64,6 +64,7 @@ int print_d(int input, int fd)
 
 	if (fd == STDERR_FILENO)
 		__putchar = _eputchar;
+
 	if (input < 0)
 	{
 		_abs_ = -input;
@@ -74,7 +75,6 @@ int print_d(int input, int fd)
 		_abs_ = input;
 
 	current = _abs_;
-
 	for (i = 1000000000; i > 1; i /= 10)
 	{
 		if (_abs_ / i)
@@ -112,7 +112,6 @@ char *convert_number(long int num, int base, int flags)
 		n = -num;
 		sign = '-';
 	}
-
 	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
@@ -125,7 +124,6 @@ char *convert_number(long int num, int base, int flags)
 
 	if (sign)
 		*--ptr = sign;
-
 	return (ptr);
 }
 
@@ -133,16 +131,18 @@ char *convert_number(long int num, int base, int flags)
  * remove_comments - Function replaces the first instance of '#' with '\0'.
  * @buf: Address of the string to modify.
  *
- * Return: void.
+ * Return: Always 0.
  */
 void remove_comments(char *buf)
 {
 	int i;
 
 	for (i = 0; buf[i] != '\0'; i++)
+	{
 		if (buf[i] == '#' && (!i || buf[i - 1] == ' '))
 		{
 			buf[i] = '\0';
 			break;
 		}
+	}
 }
