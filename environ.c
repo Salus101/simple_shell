@@ -36,6 +36,7 @@ return (NULL);
 }
 
 /**
+*
 * _mysetenv - Initializes a new environment variable or modifies an existing one.
 * @info: Structure containing potential arguments. Used to maintain
 *         a constant function prototype.
